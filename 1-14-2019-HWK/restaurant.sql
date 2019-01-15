@@ -67,14 +67,14 @@
 -- get the average stars per restaurant by category.
 -- get the max stars of a restaurant by category.
 
-SELECT name, distance FROM restaurant ORDER BY distance ASC; -- output should list all restaurants by name ascending from closest distance
-SELECT name, distance FROM restaurant ORDER BY distance ASC LIMIT 2; -- output should list all restaurants by name ascending from closest distance with a limit of two(top two)
-SELECT name, stars FROM restaurant ORDER BY stars DESC LIMIT 2; -- output should list all restaurants by name descending from highest or most stars with a limit of two(top two)
-SELECT name, stars, distance FROM restaurant WHERE distance < 2 ORDER BY stars DESC, distance ASC  LIMIT 2; -- output should list all restaurant by name descending from highest or most stars with a limit of two(top two) and with a condition of 2 miles or less.
-SELECT count(*) FROM restaurant; -- output should return a count of 3
-INSERT INTO restaurant VALUES (
-    DEFAULT, 'Ishin Udon', 16.1, 5, 'Japanese noodles & dishes', 'Katsu Curry Udon', 'Y', '1-4-2019' -- inserted another restaurant with the category ilike "%japanese%"
-);
-SELECT count(*) FROM restaurant WHERE category ilike '%japanese%';  -- output should return a count of 2 
-SELECT avg(stars) from restaurant WHERE category ilike any(VALUES('%japanese%'),('%korean%')); -- output should return an avergage of 4.67 stars from the category ilike "%japanese%"
-SELECT max(stars) from restaurant WHERE category ilike any(VALUES('%japanese%'),('%korean%')); -- output should return a max value of 5 for stars since the top restaurant star is 5 in the listed categories 
+-- SELECT name, distance FROM restaurant ORDER BY distance ASC; -- output should list all restaurants by name ascending from closest distance
+-- SELECT name, distance FROM restaurant ORDER BY distance ASC LIMIT 2; -- output should list all restaurants by name ascending from closest distance with a limit of two(top two)
+-- SELECT name, stars FROM restaurant ORDER BY stars DESC LIMIT 2; -- output should list all restaurants by name descending from highest or most stars with a limit of two(top two)
+-- SELECT name, stars, distance FROM restaurant WHERE distance < 2 ORDER BY stars DESC, distance ASC  LIMIT 2; -- output should list all restaurant by name descending from highest or most stars with a limit of two(top two) and with a condition of 2 miles or less.
+-- SELECT count(*) FROM restaurant; -- output should return a count of 3
+-- INSERT INTO restaurant VALUES (
+--     DEFAULT, 'Ishin Udon', 16.1, 5, 'Japanese noodles & dishes', 'Katsu Curry Udon', 'Y', '1-4-2019' -- inserted another restaurant with the category ilike "%japanese%"
+-- );
+-- SELECT count(*) FROM restaurant WHERE category ilike '%japanese%';  -- output should return a count of 2 
+-- SELECT avg(stars) from restaurant WHERE category ilike any(VALUES('%japanese%'),('%korean%')); -- output should return an avergage of 4.67 stars from the category ilike "%japanese%"
+-- SELECT max(stars) from restaurant WHERE category ilike any(VALUES('%japanese%'),('%korean%')); -- output should return a max value of 5 for stars since the top restaurant star is 5 in the listed categories 
