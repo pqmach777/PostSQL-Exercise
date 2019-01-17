@@ -1,0 +1,16 @@
+Association Examples
+pets and owners
+blog posts and authors
+teachers and students
+parents and children
+classes and objects
+projects and contributors
+
+Pets and owners is an example of One to Many. An owner can have one or more pets but each pet have only one owner.
+Blog posts and authors is an example of One to Many. Blog posts are created by an author on his website and an author can make as many blog posts as he wants.
+Teachers and students is an example of Many to Many. A teacher can have one or many students and vice versa can be said about student to teacher.
+Parents and children is an example of one to many but can be many to many on certain conditions. Parents can have as many children as they want and their children can't have multiple bioplogical parents. If you dont consider the biological part parents and children like step-parents or adopted children then it is possible to have a many to many relationship.
+Classes and objects is an example of one to many. Classes is like a blueprint for objects. A class is a user-defined type that describes what a certain type of object will look like. An object is a single instance of a class. You can create many objects from the same class type.
+Projects and contributors is an example of many to many. Projects can have multiple contributors, and contributors can have multiply projects.
+
+
